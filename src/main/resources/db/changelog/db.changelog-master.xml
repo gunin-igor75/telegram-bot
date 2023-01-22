@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <!--    preConditions - с какой бд буде работать liquibase-->
+    <!--    <preConditions>-->
+    <!--        <dbms type="postgresql"/>-->
+    <!--    </preConditions>-->
+
+    <!--    tagDatabase - метка- пустая база данных -->
+    <changeSet id="0" author="gil">
+        <tagDatabase tag="db_init"/>
+    </changeSet>
+
+    <!--    включение файлов в changeSet  relativeToChangelogFile - сохранение относительного пути к файлу-->
+    <include file="v-1.0/db.changelog-v.1.0.xml" relativeToChangelogFile="true"/>
+
+    <!--    tagDatabase -  -->
+    <changeSet id="1" author="gil">
+        <tagDatabase tag="1.0"/>
+    </changeSet>
+
+</databaseChangeLog>

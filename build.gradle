@@ -18,6 +18,7 @@ dependencies {
     implementation "org.liquibase:liquibase-core"
     runtimeOnly 'org.postgresql:postgresql'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'com.github.pengrad', name: 'java-telegram-bot-api', version: '6.3.0'
 }
 
 tasks.named('test') {
